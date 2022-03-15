@@ -1,23 +1,14 @@
 <h3>Places</h3>
 
-<div class="row">
+<ul>
   <% for place in @places %>
-    <div class="col-md-3 col-sm-6">
-      <h4>
-        <% if place.user %>
-          <%= place.user.first_name %>
-        <% else %>
-          anonymous
-        <% end %>
-      </h4>
-      <img src="<%= place.image %>" class="img-fluid">
-      <p><%= place.body %></p>
-    </div>
+    <li><a href="/places/<%= place.id %>"><%= place.name %></a></li>
   <% end %>
-</div>
+</ul>
 
 <p>
   <a href="/places/new">New place</a>
 </p>
+
 
 
