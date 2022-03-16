@@ -1,3 +1,4 @@
+
 class PlacesController < ApplicationController
 
   def index
@@ -13,7 +14,7 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(params["place_id"])
+    @place = Place.new(params["place"])
     @place.save
     redirect_to "/places"
   end
