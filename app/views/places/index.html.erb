@@ -1,14 +1,17 @@
-<h3>Places</h3>
+<br></br>
+<h2>Places</h2>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <a href="/places/new" class="btn btn-success">New place</a>
+    </div>
+  </div>
 
 <ul>
   <% for place in @places %>
+    <br></br>
     <li><a href="/places/<%= place.id %>"><%= place.name %></a></li>
   <% end %>
 </ul>
-
-<p>
-  <a href="/places/new">New place</a>
-</p>
-
 
 
